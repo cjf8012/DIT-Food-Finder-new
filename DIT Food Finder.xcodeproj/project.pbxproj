@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		044B73A520BE45A600D6CA03 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044B73A420BE45A600D6CA03 /* DetailViewController.swift */; };
 		14F24A0B20AD163A00296186 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14F24A0A20AD163A00296186 /* AppDelegate.swift */; };
 		14F24A1020AD163A00296186 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14F24A0E20AD163A00296186 /* Main.storyboard */; };
 		14F24A1220AD163A00296186 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14F24A1120AD163A00296186 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		044B73A420BE45A600D6CA03 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		14F24A0720AD163A00296186 /* DIT Food Finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DIT Food Finder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		14F24A0A20AD163A00296186 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14F24A0F20AD163A00296186 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				14F24A1C20AD1F9500296186 /* FoodFinderTableViewController.swift */,
 				14F24A0A20AD163A00296186 /* AppDelegate.swift */,
 				14F24A0E20AD163A00296186 /* Main.storyboard */,
+				044B73A420BE45A600D6CA03 /* DetailViewController.swift */,
 				14F24A1E20AD200500296186 /* FoodFinderTableViewCell.swift */,
 				14F24A1120AD163A00296186 /* Assets.xcassets */,
 				14F24A1320AD163A00296186 /* LaunchScreen.storyboard */,
@@ -142,6 +145,7 @@
 				14F24A1F20AD200500296186 /* FoodFinderTableViewCell.swift in Sources */,
 				14F24A0B20AD163A00296186 /* AppDelegate.swift in Sources */,
 				14F24A1D20AD1F9500296186 /* FoodFinderTableViewController.swift in Sources */,
+				044B73A520BE45A600D6CA03 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
