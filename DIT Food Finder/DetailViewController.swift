@@ -1,48 +1,48 @@
-//
-//  DetailViewController.swift
-//  DIT Food Finder
-//
-//  Created by D7703_15 on 2018. 5. 30..
-//  Copyright © 2018년 jik. All rights reserved.
-//
-
 import UIKit
 
-class DetailViewController: UIViewController {
-
-    @IBOutlet weak var detailName: UILabel!
-    @IBOutlet weak var detailAddress: UILabel!
+class DetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
     @IBOutlet weak var detailImage: UIImageView!
-    @IBOutlet weak var detailType: UILabel!
+    @IBOutlet weak var detailTableView: UITableView!
     
     var cellName = ""
     var cellType = ""
     var cellAddress = ""
     var cellImage = ""
+    var cellTel = ""
+    var cellMenu = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         self.title = cellName
-        //detailName.text = cellName
-        detailType.text = cellType
-        detailAddress.text = cellAddress
-        detailImage.image = UIImage(named: cellImage)
+        detailTableView.delegate = self
+        detailTableView.dataSource = self
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 4
     }
-    */
-
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = detailTableView.dequeueReusableCell(withIdentifier: "detailCell", for: indexPath)
+        
+        switch indexPath.row {
+        case 0:
+            cell.textLabel?.text = "종류 : " + cellType
+            return cell
+        case 1:
+            cell.textLabel?.text = "메뉴 : " + cellMenu
+            return cell
+        case 2:
+            cell.textLabel?.text = "주소 : " + cellAddress
+            return cell
+        default:
+            cell.textLabel?.text = "전화번호 : " + cellTel
+            return cell
+        }
+    }
 }
